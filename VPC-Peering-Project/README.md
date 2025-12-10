@@ -51,8 +51,6 @@ Improved visibility into system health with CloudWatch monitoring
 
 Strengthened understanding of AWS networking, routing, and security patterns
 
-https://raw.githubusercontent.com/nipun-10/aws-vpc-peering-3tier-architecture/main/aws-vpc-peering-3tier-architecture-banner.png
-
 🧰 AWS Services Used
 Service	Purpose
 VPC	Core network boundary
@@ -205,6 +203,7 @@ If you'd like to connect, collaborate, or discuss cloud projects:
 
 ⭐ Support
 If you found this project useful, please ⭐ the repository—it helps others discover it!
+
 
 
 
