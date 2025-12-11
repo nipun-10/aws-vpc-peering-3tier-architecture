@@ -1,4 +1,4 @@
-# 🚀 3-Tier Architecture with VPC Peering – AWS Project
+🚀 3-Tier Architecture with VPC Peering – AWS Project
 
 📌 Overview
 This project demonstrates a secure, scalable 3-tier AWS architecture with VPC Peering implemented between two Virtual Private Clouds.
@@ -206,9 +206,5 @@ If you'd like to connect, collaborate, or discuss cloud projects:
 
 ⭐ Support
 If you found this project useful, please ⭐ the repository—it helps others discover it!
-
-
-
-
 
 
