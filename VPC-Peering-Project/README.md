@@ -197,12 +197,16 @@ Automate deployment pipelines with CI/CD
 If you'd like to connect, collaborate, or discuss cloud projects:
 
 👤 Name: Nipun Bhardwaj
+
 📧 Email: nipuntyagi983@gmail.com
+
 🔗 LinkedIn: https://www.linkedin.com/in/nipun-bhardwaj-6312a9265/
+
 💻 GitHub: https://github.com/nipun-10
 
 ⭐ Support
 If you found this project useful, please ⭐ the repository—it helps others discover it!
+
 
 
 
