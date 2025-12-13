@@ -2,9 +2,29 @@
 
 This project demonstrates how to manually create and configure **VPC Peering** between two Virtual Private Clouds (VPCs) on AWS. It covers VPC creation, subnet configuration, routing changes, security settings, and connectivity testing using EC2 instances.
 
+S – Situation
+
+To strengthen my networking and architecture fundamentals, I decided to build a secure and scalable 3-tier architecture similar to real enterprise environments.
+
+T – Task
+
+My goal was to design an architecture with strict network isolation, secure communication between tiers, and monitoring of infrastructure health.
+
+A – Action
+
+I created a VPC with separate public and private subnets for the web, application, and database tiers.
+Configured security groups, NACLs, and routing tables to ensure least-privilege access.
+Implemented VPC Peering to connect multiple VPCs securely and enabled cross-VPC communication.
+Used CloudWatch dashboards and alarms to track performance metrics and system health.
+
+R – Result
+
+The architecture achieved strong network isolation, secure cross-tier communication, and clear monitoring visibility.
+This project deepened my understanding of AWS networking, security controls, and architecture patterns used in production systems.
 ---
 
 ## 🏗️ **Architecture Overview**
+![VPC Peering GIF](images/vpc-peering-image.gif)
 
 Two VPCs were created **manually**:
 
@@ -98,6 +118,7 @@ This confirms that **VPC Peering is working correctly**, and both instances are 
 - Private communication using VPC peering  
 - Testing network connectivity  
 - AWS networking fundamentals
+
 
 
 
