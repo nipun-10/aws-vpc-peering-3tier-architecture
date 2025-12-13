@@ -43,6 +43,7 @@ A **VPC Peering Connection** was created between these two VPCs to enable privat
 ### **1️⃣ Create Two VPCs**
 - VPC-A (10.0.0.0/16)  
 - VPC-B (192.168.0.0/16)
+![VPC Architecture](images/VPC.png)
 
 ### **2️⃣ Create Subnets**
 - Subnet in VPC-A → `10.0.1.0/24`  
@@ -55,18 +56,21 @@ A **VPC Peering Connection** was created between these two VPCs to enable privat
 ### **4️⃣ Configure Route Tables**
 - Associate subnets with their respective route tables  
 - Add route `0.0.0.0/0` → IGW for internet access
+![Route Table](images/route_table.png)
 
 ### **5️⃣ Launch EC2 Instances**
 - One EC2 instance in VPC-A  
 - One EC2 instance in VPC-B  
 - Allow SSH (port 22)  
 - Allow ICMP (ping)
+![EC2 Instances](images/instances.png)
 
 ### **6️⃣ Create VPC Peering Connection**
 - Requester: VPC-A  
 - Accepter: VPC-B  
 - Accept the peering request  
 - Check that status becomes **Active**
+![VPC Peering](images/peering.png)
 
 ### **7️⃣ Update Route Tables for Peering**
 - In VPC-A Routes → Add route to `192.168.0.0/16` via Peering ID  
@@ -94,5 +98,6 @@ This confirms that **VPC Peering is working correctly**, and both instances are 
 - Private communication using VPC peering  
 - Testing network connectivity  
 - AWS networking fundamentals
+
 
 
