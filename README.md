@@ -1,4 +1,5 @@
- 🚀 Secure & Scalable 3-Tier Architecture with VPC Isolation & Peering
+ 🚀 # **Secure & Scalable 3-Tier Architecture with VPC Isolation & Peering**
+
 
 📌 Project Overview
 This project demonstrates a real‑world AWS VPC Peering implementation used to securely connect two isolated Virtual Private Clouds (VPCs) in a 3‑tier architecture. The setup enables private communication between EC2 instances across VPCs without using the public internet, following AWS best practices for networking, routing, and security.
@@ -27,10 +28,7 @@ This project deepened my understanding of AWS networking, security controls, and
 🏗️ **Architecture Overview**
 
 ## VPC Peering – Traffic Flow (Animated)
-
-<p align="center">
-  <img src="images/vpc-peering-image.gif" width="750">
-</p>
+![VPC Peering Animation](vpc-peering-image.gif)
 
 Two VPCs were created **manually**:
 
@@ -172,6 +170,7 @@ Cloud & DevOps Enthusiast
 📌 GitHub: https://github.com/nipun-10
 
 ⭐ If you found this project helpful, consider giving the repository a star!
+
 
 
 
