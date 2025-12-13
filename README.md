@@ -1,5 +1,7 @@
-# 🚀 AWS VPC Peering Project (Manual Setup)
+ 🚀 AWS VPC Peering Project (Manual Setup)
 
+📌 Project Overview
+This project demonstrates a real‑world AWS VPC Peering implementation used to securely connect two isolated Virtual Private Clouds (VPCs) in a 3‑tier architecture. The setup enables private communication between EC2 instances across VPCs without using the public internet, following AWS best practices for networking, routing, and security.
 This project demonstrates how to manually create and configure **VPC Peering** between two Virtual Private Clouds (VPCs) on AWS. It covers VPC creation, subnet configuration, routing changes, security settings, and connectivity testing using EC2 instances.
 
 S – Situation
@@ -23,7 +25,8 @@ The architecture achieved strong network isolation, secure cross-tier communicat
 This project deepened my understanding of AWS networking, security controls, and architecture patterns used in production systems.
 ---
 
-## 🏗️ **Architecture Overview**
+🏗️ **Architecture Overview**
+
 ![VPC Peering GIF](images/vpc-peering-image.gif)
 
 Two VPCs were created **manually**:
@@ -40,12 +43,12 @@ A **VPC Peering Connection** was created between these two VPCs to enable privat
 
 ---
 
-## 📍 **Region Used**
+📍 **Region Used**
 - `ap-south-1` (Mumbai)
 
 ---
 
-## 🔧 **Resources Created Manually**
+🔧 **Resources Created Manually**
 ✔️ VPCs  
 ✔️ Subnets  
 ✔️ Internet Gateways  
@@ -58,51 +61,51 @@ A **VPC Peering Connection** was created between these two VPCs to enable privat
 
 ---
 
-## 🔄 **Project Flow / Steps Performed**
+🔄 **Project Flow / Steps Performed**
 
-### **1️⃣ Create Two VPCs**
+ **1️⃣ Create Two VPCs**
 - VPC-A (10.0.0.0/16)  
 - VPC-B (192.168.0.0/16)
 ![VPC Architecture](VPC.jpg)
 
-### **2️⃣ Create Subnets**
+ **2️⃣ Create Subnets**
 - Subnet in VPC-A → `10.0.1.0/24`  
 - Subnet in VPC-B → `192.168.1.0/24`
 
-### **3️⃣ Attach Internet Gateways**
+ **3️⃣ Attach Internet Gateways**
 - Create IGW for each VPC  
 - Attach them to VPC-A and VPC-B
 
-### **4️⃣ Configure Route Tables**
+**4️⃣ Configure Route Tables**
 - Associate subnets with their respective route tables  
 - Add route `0.0.0.0/0` → IGW for internet access
 ![Route Table](route_table.jpg)
 
-### **5️⃣ Launch EC2 Instances**
+ **5️⃣ Launch EC2 Instances**
 - One EC2 instance in VPC-A  
 - One EC2 instance in VPC-B  
 - Allow SSH (port 22)  
 - Allow ICMP (ping)
 ![EC2 Instances](instances.jpg)
 
-### **6️⃣ Create VPC Peering Connection**
+**6️⃣ Create VPC Peering Connection**
 - Requester: VPC-A  
 - Accepter: VPC-B  
 - Accept the peering request  
 - Check that status becomes **Active**
 ![EC2 Instances](instances.jpg)
 
-### **7️⃣ Update Route Tables for Peering**
+**7️⃣ Update Route Tables for Peering**
 - In VPC-A Routes → Add route to `192.168.0.0/16` via Peering ID  
 - In VPC-B Routes → Add route to `10.0.0.0/16` via Peering ID
 
-### **8️⃣ Modify Security Groups**
+**8️⃣ Modify Security Groups**
 - Allow inbound ICMP from the other VPC’s CIDR  
 - Allow SSH if required
 
 ---
 
-## 🧪 **Connectivity Testing**
+ 🧪 **Connectivity Testing**
 - Successfully SSH’d into EC2 instances  
 - Ping from **EC2-A → EC2-B** = ✔️ Success  
 - Ping from **EC2-B → EC2-A** = ✔️ Success  
@@ -111,7 +114,7 @@ This confirms that **VPC Peering is working correctly**, and both instances are 
 
 ---
 
-## 📘 **What I Learned**
+📘 **What I Learned**
 - Understanding CIDR planning  
 - Creating VPCs & subnets manually  
 - How routing tables work  
@@ -119,6 +122,49 @@ This confirms that **VPC Peering is working correctly**, and both instances are 
 - Testing network connectivity  
 - AWS networking fundamentals
 
+🔐 Security Best Practices
+No internet exposure for private communication
+
+Security Groups restrict inbound/outbound traffic
+
+Separate route tables for isolation
+
+Least privilege networking access
+
+📚 Key Learnings
+Deep understanding of AWS VPC networking
+
+Practical experience with VPC Peering
+
+Route table dependency in inter‑VPC traffic
+
+Real‑world troubleshooting of connectivity issues
+
+🧠 Use Cases
+Microservices communication across VPCs
+
+Multi‑account AWS architectures
+
+Secure backend connectivity
+
+Hybrid and enterprise cloud designs
+
+🚀 Future Enhancements
+Replace VPC Peering with Transit Gateway
+
+Add NAT Gateway for outbound access
+
+Implement Terraform / IaC
+
+Enable VPC Flow Logs
+
+🧑‍💻 Author
+Nipun Bhardwaj
+Cloud & DevOps Enthusiast
+
+📌 GitHub: https://github.com/nipun-10
+
+⭐ If you found this project helpful, consider giving the repository a star!
 
 
 
