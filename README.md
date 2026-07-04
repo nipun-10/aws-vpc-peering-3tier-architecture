@@ -161,7 +161,7 @@ This confirms that **VPC Peering is working correctly**, and both instances are 
 
 🧑‍💻 Author
      Nipun Bhardwaj
-     Cloud & DevOps Enthusiast
+     Cloud Engineer | AWS | DevOps | Generative AI | Agengic AI engineer
 
 📌 GitHub: https://github.com/nipun-10
 
